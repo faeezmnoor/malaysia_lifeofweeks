@@ -1,16 +1,68 @@
-# React + Vite
+# Life in Weeks — Malaysia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Your life drawn as a grid of weeks, using Malaysian life expectancy rather than
+someone else's.**
 
-Currently, two official plugins are available:
+Every "life in weeks" chart on the internet quietly assumes you are American or
+Western European. That is a difference of several years, and in Malaysia the more
+interesting problem is that a single national number hides a much bigger spread
+than most people expect.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Enter your birthdate, gender and ethnicity, and you get your own grid: one box per
+week, filled in for the weeks you've lived.
 
-## React Compiler
+## Why the numbers are split the way they are
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Malaysian life expectancy varies substantially by both gender and ethnic group.
+From the 2024 baseline used here:
 
-## Expanding the ESLint configuration
+| | Male | Female |
+|---|---|---|
+| **Malay** | 72.99 | 78.37 |
+| **Chinese** | 77.08 | 81.39 |
+| **Indian** | 69.30 | 78.57 |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Nearly **eight years** separate Chinese and Indian men. Averaging that into one
+national figure would make the chart wrong for almost everybody, in one direction
+or the other — which is the whole reason this exists as a separate thing rather
+than a locale setting on someone else's version.
+
+It also adjusts for the fact that life expectancy is still rising. A figure quoted
+for 2024 understates how long someone born in 1995 can expect to live, so the
+projection applies roughly half the expected annual gain across the remaining
+years — a rough correction, but a less wrong one than ignoring it.
+
+## Data sources
+
+- **Baseline (2024):** [DOSM Abridged Life Tables, Malaysia 2024](https://www.dosm.gov.my)
+  — the Department of Statistics Malaysia's official tables.
+- **Projections:** Islam et al., exponential growth model for Malaysian life
+  expectancy (2014–2050).
+
+## What it shows
+
+Alongside the week grid: weeks lived and remaining, the percentage of the estimate
+you've used, and a set of counts that make the same span feel different — days,
+seasons, lunar cycles, trips around the sun, hours slept, heartbeats, breaths, and
+roughly how many people were alive on Earth the year you were born.
+
+## Running it
+
+```bash
+npm install
+npm run dev      # → http://localhost:5173
+npm run build
+```
+
+React and Vite with Tailwind. No backend, no analytics, no data leaves the browser
+— the dates you enter are never sent anywhere.
+
+## A note on the estimate
+
+This is an actuarial average applied to an individual, which is not what averages
+are for. It knows nothing about you beyond three fields. Treat the number as a
+prompt to think about time, not a prediction.
+
+## License
+
+[MIT](LICENSE)
