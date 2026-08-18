@@ -11,6 +11,8 @@ than most people expect.
 Enter your birthdate, gender and ethnicity, and you get your own grid: one box per
 week, filled in for the weeks you've lived.
 
+![Life in Weeks — the week grid for a Malay male born 1992, 49% lived](docs/screenshots/01-weeks.png)
+
 ## Why the numbers are split the way they are
 
 Malaysian life expectancy varies substantially by both gender and ethnic group.
@@ -41,10 +43,17 @@ years — a rough correction, but a less wrong one than ignoring it.
 
 ## What it shows
 
-Alongside the week grid: weeks lived and remaining, the percentage of the estimate
-you've used, and a set of counts that make the same span feel different — days,
-seasons, lunar cycles, trips around the sun, hours slept, heartbeats, breaths, and
-roughly how many people were alive on Earth the year you were born.
+Alongside the grid: weeks lived and remaining, and a set of counts that make the
+same span feel different — days, seasons, lunar cycles, trips around the sun, hours
+slept, heartbeats, breaths. Then the same number at three widening scales: how much
+the world's population grew while you were here, how far the Earth has travelled
+around the Sun since, and what fraction of a giant sequoia's lifespan you've used.
+
+It also shows its working. An **Assumptions & methodology** panel states the
+baseline, the projection model, the 50% capture rate applied to future gains, and
+that "Other" falls back to the national average — because every number on the page
+is an estimate stacked on an estimate, and hiding that would make it feel more
+precise than it is.
 
 ## Running it
 
