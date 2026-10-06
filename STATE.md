@@ -1,15 +1,12 @@
 # STATE — malaysia_lifeofweeks
 <!-- layer: state · status: living · budget: 80 lines -->
-verified: 2026-10-06 at cea9b72 by npm run build (exit 0), bun .standard/standard-check.mjs . (0 FAIL), gates G3 and G4 (exit 0)
+verified: 2026-10-06 at b67c9dd by CI on PR #1 (build, standard-check, eslint report-only all green) and the review cold-start test (pass)
 
 ## Now
-- A browser-only React app (Vite, Tailwind) that draws a life-in-weeks grid from DOSM 2024 Malaysian life tables (2026-10-06, main).
-- Deployment is not recorded: the README does not state a live URL or host.
-- Slice 001-adopt-standard is open on branch slice/001-adopt-standard, not merged (2026-10-06).
-
+- A browser-only React + Vite life-in-weeks app; deployment is not recorded in the repo.
+- Adopted the house standard at Minimal tier (PR #1, merged 2026-10-06): AGENTS.md, CLAUDE.md, STATE.md, CI with build and standard-check required on main.
 ## Next
-Nothing planned; the repo is complete.
-
+- Nothing planned; the project is complete. Future work opens a slice under docs/slices/.
 ## Blocked
 - reported defect: `npm run lint` fails with 13 react-hooks errors in src/App.jsx; out of scope for the documentation migration; the owner decides whether to fix
 
@@ -22,5 +19,5 @@ Nothing planned; the repo is complete.
 ## Measurements
 | Slice | Builder tokens | Reviewer tokens | Fix rounds |
 | --- | --- | --- | --- |
-| 001-adopt-standard | not recorded | not recorded | 0 |
-Owner minutes this week: not recorded. Last cold-start test: not run.
+| 001-adopt-standard | ~73k + ~58k (2 attempts) | ~61k + ~63k (2 rounds) | 1 |
+Owner minutes this week: 0. Last cold-start test: 2026-10-06, pass.
