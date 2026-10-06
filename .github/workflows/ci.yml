@@ -25,7 +25,7 @@ jobs:
           path: repo
       - uses: actions/checkout@v4
         with:
-          repository: faeezmnoor/standard
+          repository: ${{ github.repository_owner }}/standard
           token: ${{ secrets.STANDARD_TOKEN }}
           path: standard
       - uses: oven-sh/setup-bun@v2
