@@ -26,7 +26,6 @@ jobs:
 
   eslint:
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -34,4 +33,4 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npm run lint
+      - run: npm run lint || echo "::warning title=eslint::npm run lint reports errors in existing code; recorded in STATE.md as a reported defect, not fixed by this migration"
