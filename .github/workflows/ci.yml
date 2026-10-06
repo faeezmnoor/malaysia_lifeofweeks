@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+
+  standard-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: repo
+      - uses: actions/checkout@v4
+        with:
+          repository: faeezmnoor/standard
+          token: ${{ secrets.STANDARD_TOKEN }}
+          path: standard
+      - uses: oven-sh/setup-bun@v2
+      - name: Run the standard lint
+        working-directory: repo
+        run: bun run ../standard/scripts/standard-check.ts .
