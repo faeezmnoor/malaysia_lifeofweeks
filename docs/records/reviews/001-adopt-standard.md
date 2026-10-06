@@ -11,7 +11,7 @@ Range: main...HEAD at 3e906fc. Tier B.
 - MINOR: CI `eslint` job passing even if `continue-on-error` is removed is not caught by the lint (see planted defects).
 
 ## Verified clean
-- Hygiene: no person name, absolute path or queue/decision link in the diff; the only /Users/ hit is the lint's own H1 message. README.md, LICENSE, src/, index.html and other configs untouched.
+- Hygiene: no person name, absolute path or queue/decision link in the diff. README.md, LICENSE, src/, index.html and other configs untouched.
 - Stack and repo map match package.json and src/. Build exits 0. `npm run lint` fails with 13 errors, as STATE.md says.
 - STATE.md: 26 lines; deployment "not recorded" is true (README has no live URL); Blocked names no one; Owner items none.
 - ci.yml: three jobs as briefed, job-level continue-on-error on eslint, standard-check runs `bun .standard/standard-check.mjs .`, no secrets, majors pinned (v4, v2).
@@ -28,4 +28,14 @@ Result: enough for state, but AGENTS.md's done-command is unusable until the blo
 - Absolute path in AGENTS.md: lint H1 caught it; G3 caught it.
 - continue-on-error removed: survived both lint and gates.
 
-VERDICT: BLOCK
+
+## Round 2
+Re-run at c4343d5. Results:
+- standard-check: 0 FAIL, 0 WARN, exit 0. `npm run build`: exit 0.
+- Gate G4: exit 0. Gate G3: failed on this review file (it quoted a home-path pattern in round 1); the quote is removed and G3 now exits 0.
+- AGENTS.md line 14 is the single command `npm run build && bun .standard/standard-check.mjs .`; header comment says eight sections plus the header.
+- STATE.md verified line names cea9b72 (on the branch) with its evidence.
+- ci.yml triggers: pull_request and push to main only.
+- Still open: the eslint job's continue-on-error is not guarded by any lint or gate (accepted, noted in round 1).
+
+VERDICT: APPROVE
