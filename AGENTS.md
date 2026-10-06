@@ -1,6 +1,6 @@
 # AGENTS.md — malaysia_lifeofweeks
 <!-- standard: 1.1.0 · tier: minimal · ui: yes · db: no · verified: 2026-10-06 -->
-<!-- Budget 150 lines. Nine sections, this order. Concrete commands and paths; no aspirations; no Claude-only features (those go in CLAUDE.md or .claude/rules/). -->
+<!-- Budget 150 lines. Eight numbered sections plus this header line, this order. Concrete commands and paths; no aspirations; no Claude-only features (those go in CLAUDE.md or .claude/rules/). -->
 
 ## 1. What this is
 - A "life in weeks" grid for Malaysians: one box per week, shaded for weeks lived.
@@ -11,7 +11,7 @@
 ## 2. Stack and commands
 - Runtime and package manager: Node.js with npm (`package-lock.json`), React 19, Vite 7, Tailwind CSS 4, plain JavaScript (JSX).
 - Install: `npm ci` · Dev: `npm run dev` · Test: none · Typecheck: none · Build: `npm run build`
-- Full verification (the gate for "done"): `npm run build - Full verification (the gate for "done"): `npm run lint && npm run build`- Full verification (the gate for "done"): `npm run lint && npm run build` bun .standard/standard-check.mjs .`
+- Full verification (the gate for "done"): `npm run build && bun .standard/standard-check.mjs .`
 
 ## 3. Read first, in this order (nothing else unless a brief cites it)
 1. STATE.md — what is done, next, blocked
