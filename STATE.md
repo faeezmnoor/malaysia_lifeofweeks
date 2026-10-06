@@ -11,13 +11,13 @@ verified: 2026-10-06 at df3b0dc by npm run lint, npm run build (exit 0 each); st
 Nothing planned; the repo is complete.
 
 ## Blocked
-- Nothing, apart from slice 001 itself: standard-check requires DESIGN.md, docs/design/ and docs/product/flows.md, which the slice brief does not authorise (since 2026-10-06).
+- reported defect: `npm run lint` fails with 13 react-hooks errors in src/App.jsx; out of scope for the documentation migration; the owner decides whether to fix
 
 ## Direction in force
 - Public portfolio repo, README under the portfolio standard.
 
 ## Owner items
-- The owner adds the STANDARD_TOKEN secret so CI can run the standard lint.
+- none
 
 ## Measurements
 | Slice | Builder tokens | Reviewer tokens | Fix rounds |
