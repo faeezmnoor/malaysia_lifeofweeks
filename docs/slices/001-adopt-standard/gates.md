@@ -4,5 +4,5 @@
 | --- | --- | --- | --- |
 | G1 | `bun .standard/standard-check.mjs .` | exit 0 | |
 | G2 | `npm run build` | exit 0 | |
-| G3 | `sh -c "! grep -rIl -e /Users/ -e /home/ AGENTS.md CLAUDE.md STATE.md docs .github"` | exit 0 | |
+| G3 | `sh -c "! grep -rIl -e /Us[e]rs/ -e /ho[m]e/ AGENTS.md CLAUDE.md STATE.md docs .github"` | exit 0 | |
 | G4 | `sh -c "! grep -rIl -i fa[e]ez AGENTS.md CLAUDE.md STATE.md docs .github"` | exit 0 | |
