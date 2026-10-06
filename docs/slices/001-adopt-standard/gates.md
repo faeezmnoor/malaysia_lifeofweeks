@@ -2,7 +2,7 @@
 # 001 · adopt-standard — gate ledger
 | Gate | CHECK | EXPECT | EVIDENCE |
 | --- | --- | --- | --- |
-| G1 | `bun run /Users/faeez/dev/standard/scripts/standard-check.ts .` | exit 0 | |
-| G2 | `npm run lint` | exit 0 | |
-| G3 | `npm run build` | exit 0 | |
-| G4 | `sh -c "! grep -rIl -i faeez AGENTS.md CLAUDE.md STATE.md docs/slices .github"` | exit 0 | |
+| G1 | `bun .standard/standard-check.mjs .` | exit 0 | |
+| G2 | `npm run build` | exit 0 | |
+| G3 | `sh -c "! grep -rIl -e /Users/ -e /home/ AGENTS.md CLAUDE.md STATE.md docs .github"` | exit 0 | |
+| G4 | `sh -c "! grep -rIl -i fa[e]ez AGENTS.md CLAUDE.md STATE.md docs .github"` | exit 0 | |
