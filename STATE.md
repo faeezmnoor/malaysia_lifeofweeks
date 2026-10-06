@@ -1,6 +1,6 @@
 # STATE — malaysia_lifeofweeks
 <!-- layer: state · status: living · budget: 80 lines -->
-verified: 2026-10-06 at 34cad17 by bun .standard/standard-check.mjs . (exit 0), npm run build (exit 0), two grep gates (exit 0)
+verified: 2026-10-06 at cea9b72 by npm run build (exit 0), bun .standard/standard-check.mjs . (0 FAIL), gates G3 and G4 (exit 0)
 
 ## Now
 - A browser-only React app (Vite, Tailwind) that draws a life-in-weeks grid from DOSM 2024 Malaysian life tables (2026-10-06, main).
