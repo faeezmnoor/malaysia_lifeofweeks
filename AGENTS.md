@@ -1,5 +1,5 @@
 # AGENTS.md — malaysia_lifeofweeks
-<!-- standard: 1.1.0 · tier: minimal · ui: yes · db: no · verified: 2026-10-06 -->
+<!-- standard: 1.6.0 · tier: minimal · ui: yes · db: no · verified: 2026-11-11 · audit: last 2026-11-11 · next 2027-05-11 -->
 <!-- Budget 150 lines. Eight numbered sections plus this header line, this order. Concrete commands and paths; no aspirations; no Claude-only features (those go in CLAUDE.md or .claude/rules/). -->
 
 ## 1. What this is
@@ -15,7 +15,7 @@
 
 ## 3. Read first, in this order (nothing else unless a brief cites it)
 1. STATE.md — what is done, next, blocked
-2. The current slice's docs/slices/<id>/brief.md
+2. The current slice's docs/slices/<id>/brief.md (open slices only; closed ones are in docs/records/slices/)
 
 ## 4. Boundaries
 - Never: deploy · push to main · read .env* or other secrets · call paid services · force-push, reset --hard, rm -rf
@@ -25,7 +25,7 @@
 
 ## 5. Where facts live
 - Current state: STATE.md · Owner items: STATE.md §Owner items · Direction: STATE.md §Direction in force
-- Slice records: docs/slices/ · Screenshots used by the README: docs/screenshots/
+- Slice records: docs/records/slices/ · Screenshots used by the README: docs/screenshots/
 - Product description for readers: README.md
 
 ## 6. Working rules
@@ -41,5 +41,5 @@
 - `src/main.jsx`, `src/index.css`, `src/App.css` — entry point and styles
 - `index.html`, `vite.config.js`, `tailwind.config.js`, `eslint.config.js` — build and lint config
 - `public/`, `src/assets/` — static assets
-- `docs/screenshots/` — images used by README.md; `docs/slices/` — slice briefs, gates and notes
+- `docs/screenshots/` — images used by README.md; `docs/records/slices/` — closed slice briefs, gates and notes
 - `.github/workflows/ci.yml` — CI: `build` (npm ci, build), `standard-check` (vendored lint in `.standard/`) and `eslint` (reported, non-blocking)
