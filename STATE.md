@@ -1,11 +1,11 @@
 # STATE — malaysia_lifeofweeks
 <!-- layer: state · status: living · budget: 80 lines -->
-verified: 2026-11-11 at 8eddb77 by npm run build exit 0 and the 1.6.0 lint at 0 FAIL, 0 WARN; CI run list and PR list read (PRs #1, #2 merged, none open)
+verified: 2026-11-20 at e919f1c by npm run build exit 0 and the 1.7.0 lint at 0 FAIL, 0 WARN; CI checks on pull request 4 read (build, eslint, standard-check pass); PR list read (none open)
 
 ## Now
 - A browser-only React + Vite life-in-weeks app; deployment is not recorded in the repo.
 - Adopted the house standard at Minimal tier (PR #1, merged 2026-10-06): AGENTS.md, CLAUDE.md, STATE.md, CI with build and standard-check required on main.
-- 2026-11-11: re-applied standard 1.6.0 (lint bundle, declared version, harness-audit line in the AGENTS.md header); local audit in docs/records/audit-2026-11.md; lint 0 FAIL. Pending the pull request.
+- Standard 1.7.0 re-applied 2026-11-20 (pull request 4, e919f1c): lint bundle and declared version; no line-length or chain-length rows, so nothing changes on 2026-12-14. The 1.6.0 re-apply and its local audit (docs/records/audit-2026-11.md) merged 2026-11-11.
 ## Next
 - Nothing planned; the project is complete. Future work opens a slice under docs/slices/.
 ## Blocked
@@ -21,4 +21,4 @@ verified: 2026-11-11 at 8eddb77 by npm run build exit 0 and the 1.6.0 lint at 0 
 | Slice | Builder tokens | Reviewer tokens | Fix rounds |
 | --- | --- | --- | --- |
 | 001-adopt-standard | ~73k + ~58k (2 attempts) | ~61k + ~63k (2 rounds) | 1 |
-Owner minutes this week: 0. Last cold-start test: 2026-10-06, pass (not re-run in the 1.6.0 re-apply).
+Owner minutes this week: 0. Last cold-start test: 2026-10-06, pass (not re-run in the 1.6.0 or 1.7.0 re-apply).
