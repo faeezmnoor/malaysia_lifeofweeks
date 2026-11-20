@@ -1,5 +1,5 @@
 # AGENTS.md — malaysia_lifeofweeks
-<!-- standard: 1.6.0 · tier: minimal · ui: yes · db: no · verified: 2026-11-11 · audit: last 2026-11-11 · next 2027-05-11 -->
+<!-- standard: 1.7.0 · tier: minimal · ui: yes · db: no · verified: 2026-11-20 · audit: last 2026-11-11 · next 2027-05-11 -->
 <!-- Budget 150 lines. Eight numbered sections plus this header line, this order. Concrete commands and paths; no aspirations; no Claude-only features (those go in CLAUDE.md or .claude/rules/). -->
 
 ## 1. What this is
